@@ -1,0 +1,12 @@
+#include<stdio.h>
+#define LENGTH 10
+void main()
+{
+       const int BREADTH=5;
+       int area;
+       area=LENGTH*BREADTH;
+       printf("%d",area);
+}
+
+Output:
+50
