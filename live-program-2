@@ -1,0 +1,47 @@
+#include <stdio.h>
+# define N 7
+#define fun(a,num) ((a%num==0)?printf("found"):printf("notfound"))
+int fu(int arr[]);
+enum check{notfound,found}; 
+int main()
+{
+    int arr[N],t;
+    printf("no of elements in array = %ld",sizeof(arr)/sizeof(int));
+    for(int i=0;i<N;i++)
+    {
+      //  scanf("%d",&arr[i]);
+      scanf("%d",arr+i);// both the methods would work
+    }
+     for(int i=0;i<N/2;i++)
+    {
+        t=arr[i];
+        arr[i]=arr[N-i-1];
+        arr[7-i-1]=t;
+    }
+      for(int i=0;i<N;i++)
+      printf("%d ",arr[i]);
+      int count=0;
+      while(N>count)
+      {
+        count++; 
+      }printf("\n no of elements in array : %d",count);
+      int i=0, sum=0;
+      while(i<N)
+      {
+          sum=sum+arr[i];
+          i++;
+      }
+      printf("\nsum of array elements = %d",sum);
+      int a[]={1,1,2,2,3,3,4,4};
+      fu(a);
+    return 0;
+}
+int fu(int a[])
+{
+    int num;
+    scanf("%d",&num);
+    for(int i=0;i<N;i++)
+    {  
+        fun(i,num);
+    }
+}
