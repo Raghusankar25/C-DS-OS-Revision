@@ -1,0 +1,16 @@
+#include<stdio.h>
+enum check{not_found,found};
+int main()
+{
+    char s[50];
+    char ch;
+    int count=not_found;
+    printf("enter string and char:");
+    scanf("%s %c",s,&ch);
+    for(int i=not_found;s[i]!='\0';i++)
+    {
+        if(s[i]==ch)
+          count++;    
+    }
+    (found>0)?printf("char is found and its freq is %d",count):printf("char is not found");
+    }
