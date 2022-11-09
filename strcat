@@ -1,0 +1,15 @@
+#include <stdio.h>
+#define SIZE 40
+void my_strcat(char *s1, const char *s2)
+{
+  (*s1)? my_strcat(++s1, s2): (*s1++ = *s2++)? my_strcat(s1, s2): 0 ;
+}
+int main()
+{
+    char dest[SIZE] = "Welcome to ";
+    char src[] = "Thundersoft";
+    my_strcat(dest, src);
+    printf("%s\n\n",dest);
+    printf("%s\n\n",src);
+    return 0;
+}
