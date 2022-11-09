@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+int arr[5];//declarartion
+scanf("%d",&arr[0]);
+scanf("%d",&arr[1]);
+scanf("%d",&arr[2]);
+scanf("%d",&arr[3]);
+scanf("%d",&arr[4]);
+printf("%d ",arr[0]);
+printf("%d ",arr[1]);
+printf("%d ",arr[2]);
+printf("%d ",arr[3]);
+printf("%d\n",arr[4]);
+printf("address at 0th index is %p\n",&arr[0]);
+printf("address at 1th index is %p\n",&arr[1]);
+printf("address at 2th index is %p\n",&arr[2]);
+printf("address at 3th index is %p\n",&arr[3]);
+printf("address at 4th index is %p",&arr[4]);
+ }
+
+Output:
+10 20 30 40 50
+10 20 30 40 50
+address at 0th index is 0x7ffcf3a97120
+address at 1th index is 0x7ffcf3a97124
+address at 2th index is 0x7ffcf3a97128
+address at 3th index is 0x7ffcf3a9712c
+address at 4th index is 0x7ffcf3a97130
