@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+	char temp, s[100];
+	int i;
+	printf("Enter String:");
+	scanf("%s",s);
+	int len=strlen(s);
+for(i=1;s[i]!='\0';i++)
+temp = s[0];
+s[0] = s[n-1];
+s[n1i] = temp;
+	printf("Output String: %s", s);
+}
