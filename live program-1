@@ -1,0 +1,54 @@
+#include <stdio.h>
+#define R 32
+#define S 7
+#define PIE 3.14
+enum cas{ONE=1, TWO, THREE, FOUR, FIVE};
+enum week{sun, mon, tue, wed, thu, fri, sat};
+int main()
+unsigned int choice;
+{
+    printf("Enter choice:");
+    scanf("%d",&choice);
+    float far;
+    float celes;
+    switch(choice)
+    {
+        case ONE:
+        printf("Enter the fahrenheit:");
+        scanf("%f",&far);
+        float celes=(far-R)*5556;
+        printf("%f",celes);
+        break;
+        
+        case TWO:
+        printf("Enter the celes:");
+        scanf("%f",&celes);
+        float f=(celes*1.8)+R;
+        printf("%f",far);
+        break;
+        
+        case THREE:
+        printf(" enter days:");
+        scanf("%d",D);
+        D=week/S;
+        printf("%d",D);
+        break;
+        
+        case FOUR:
+        printf("enter weeks");
+        int day=S*week;
+        printf("%d",day);
+        break;
+        
+        case FIVE:
+        printf("enter radius:");
+        scanf("%d",&r);
+        a=r*r*PIE;
+        printf("%f", a);
+        break;
+        
+        default:
+            printf("This is invalid.. try only from 1 to 5");
+    }
+    return 0;
+}

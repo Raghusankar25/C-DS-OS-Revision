@@ -1,0 +1,17 @@
+#include<stdio.h>
+void display();
+void main()
+{
+display():
+display();
+}
+void display();
+{
+static int x=0;
+x+=10;
+printf("%d\n",x);
+}
+
+Output:
+10
+20
