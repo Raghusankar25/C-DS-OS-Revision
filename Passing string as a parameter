@@ -1,0 +1,17 @@
+#include<stdio.h>
+void display(char *, char *);
+void main()
+{
+char s1[]="Raghu";
+char s2[]="sankar";
+display(s1,s2);
+}
+void display(char *s1, char *s2);
+{
+int i.l=0;
+for(i=0;s1[i]!='\0';i++)
+l++
+s2[0]='S';
+printf("length of string is %s", s1);
+printf("%s %s", s1,s2);
+}
