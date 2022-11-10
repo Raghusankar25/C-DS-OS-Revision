@@ -1,0 +1,32 @@
+#include<stdio.h>
+enum compile{Found,notfound};
+int compare(char *, char *);
+int main()
+{
+char s1[20];
+char s2[20];
+printf("Enter first string:");
+scanf("%s",s1);
+printf("enter second string:");
+scanf("%s",s2);
+int c=compare(s1,s2);
+(c==Found)?printf("Strings are same"):printf("strings are not same");
+return Found;
+}
+int compare(char *a, char *b)
+{
+int flag=Found,i=Found;
+while(a[i]!='\0'&& b[i]!='\0')
+{
+if(a[i]!=b[i])
+{
+flag=Found;
+break;
+}
+i++;
+}
+if(flag==Found)
+return Found;
+else
+return notfound;
+}
