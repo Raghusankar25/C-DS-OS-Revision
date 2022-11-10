@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include<string.h>
+enum compile{Asce=1,Desc=2};
+char sorted(char[]);
+char unsorted(char[]);
+int main()
+{
+    char s[50]="raghuvaran";
+    int choice;
+    printf("enter choice:");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case Asce: sorted(s);
+                    break;
+        case Desc: unsorted(s);
+                    break;
+        default:
+                printf("invalid");
+    }
+
+    return 0;
+}
+char sorted(char s[])
+{
+    int l,i,j;
+    char temp;
+    l=strlen(s);
+    for(i=0;i<l;i++)
+    for(j=0;j<l;j++)
+    if(s[i]<s[j])
+    {
+        temp=s[i];
+        s[i]=s[j];
+        s[j]=temp;
+    }
+    printf("sorted array is %s\n",s);
+    }
+   char unsorted(char s[])
+{
+    int l,i,j;
+    char temp;
+    l=strlen(s);
+    for(i=0;i<l;i++)
+    for(j=0;j<l;j++)
+    if(s[i]>s[j])
+    {
+        temp=s[i];
+        s[i]=s[j];
+        s[j]=temp;
+    }
+    printf("unsorted array is %s\n",s); 
+}
