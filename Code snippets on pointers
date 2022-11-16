@@ -1,0 +1,192 @@
+#include <stdio.h>
+
+int main()
+{
+    int a=10;
+    int *ptr=&a;
+    printf("%d ",a);//10
+    printf("%p ",&a);//addr of a
+    printf("%p ",ptr);//gives addr of a
+    printf("%d ",*ptr);//value of a
+    printf("%p ",&ptr);//addr of ptr
+
+    return 0;
+}
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    char arr[]="hello world";
+    char *ptr=arr;
+    printf("%s ",ptr);
+    *ptr++;//pointer is assigned firts after that incremented(ello world)
+    printf("%s ",ptr);
+    ++*ptr;//pointer is first incremented and then assigned(fllo world)
+     printf("%s",ptr);
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a=10;
+    void *ptr=&a;
+    printf("%d ",a);//10
+    printf("%p ",&a);//addr of a
+    printf("%p ",(int*)ptr);//gives addr of a
+    printf("%d ",*(int*)ptr);//value of a
+    printf("%p ",&ptr);//addr of ptr
+
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+int arr[5] = {10, 100, 200, 300, 500};
+int *ptr;
+ptr = &arr[0];//array is assigning to pointer
+for (int i = 0; i < 5; i++) {
+printf("Value of *ptr = %d\n", *ptr);
+printf("Address of *ptr = %p\n\n", ptr);
+ptr=ptr+2;//pointer is incremented to 2 times
+}
+}
+output:
+Value of *ptr = 10
+Address of *ptr = 0x7fff836f4b70
+
+Value of *ptr = 200
+Address of *ptr = 0x7fff836f4b78
+
+Value of *ptr = 500
+Address of *ptr = 0x7fff836f4b80
+
+Value of *ptr = -698962688
+Address of *ptr = 0x7fff836f4b88
+
+Value of *ptr = 0
+Address of *ptr = 0x7fff836f4b90
+
+
+
+
+#include <stdio.h>
+ 
+int main()
+{
+    int *ptr;
+    int x;
+ 
+    ptr = &x;
+    *ptr = 0;
+ 
+    printf(" x = %d\n", x);
+    printf(" *ptr = %d\n", *ptr);
+ 
+    *ptr += 5;
+    printf(" x  = %d\n", x);
+    printf(" *ptr = %d\n", *ptr);
+ 
+    (*ptr)++;
+    printf(" x = %d\n", x);
+    printf(" *ptr = %d\n", *ptr);
+ 
+    return 0;
+}
+
+
+
+# include <stdio.h>
+void fun(int x)
+{
+    x = 30;
+}
+ 
+int main()
+{
+  int y = 20;
+  fun(y);
+  printf("%d", y);
+  return 0;
+}
+
+
+# include <stdio.h>
+void fun(int *ptr)
+{
+    *ptr = 30;
+}
+ 
+int main()
+{
+  int y = 20;
+  fun(&y);
+  printf("%d", y);
+ 
+  return 0;
+}
+
+
+
+#include <stdio.h>
+int i=0,j=1;
+int fun(int *p,int *q)
+{
+    p=q;
+    *p=2;
+    printf("%d  %d  ",*p,*q);
+}
+int main()
+{
+    fun(&i,&j);
+    printf("%d %d",i,j);
+}
+
+
+
+#include <stdio.h>
+int main() {
+int arr[] = {10, 100, 200};
+int *ptr=arr;
+//ptr = arr;
+char arrc[]={100,200,30};
+char *ptrc=arrc;
+printf("sizeof arr[i] = %ld", sizeof(arr));
+printf("sizeof ptr = %ld", sizeof(ptr));
+printf("sizeof arrc[i] = %ld", sizeof(arrc));
+printf("sizeof ptrc = %ld", sizeof(ptrc));
+}
+
+
+
+#include<stdio.h>
+#define print(x) printf("%d",x)
+int x,z;
+void s(int x)
+{
+  x+=x;
+  print(x);
+}
+void r(int *y)
+{
+  int x=*y+z;
+  s(x);
+  *y=x-1;
+  print(x);
+}
+main (void)
+{
+x=5;
+r(&x);
+
+print(x);
+}
