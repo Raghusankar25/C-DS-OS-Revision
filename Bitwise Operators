@@ -1,0 +1,85 @@
+searching num:
+#include <stdio.h>
+int main() {
+    int arr[]={3 ,4 , 5, 6,7,8};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    int num,res=0;
+    printf("enter the number to search:");
+    scanf("%d",&num);
+    //printf("searching element is found:%d",num);
+    for(int i=0;i<size;i++)
+    {
+    if((arr[i]^num)==0)
+    {
+        res++;
+    }  
+    }
+(res>0)?printf("found"):printf("not found");
+ 
+    return 0;
+}
+
+
+even & odd:
+#include <stdio.h>
+int main() {
+  
+    int num;
+    printf("enter the number :");
+    scanf("%d",&num);
+   
+((num&1)==0)?printf("even"):printf("odd");
+ 
+    return 0;
+}
+
+toggling:
+#include <stdio.h>
+int main() {
+  
+    int num,pos;
+    printf("enter the number :");
+    scanf("%d",&num);
+    printf("enter the pos:");
+    scanf("%d",&pos);
+   int res=(num^(1<<(pos-1)));
+printf("after toggling the num is:%d",res);
+ 
+    return 0;
+}
+
+
+to know the bit either set/unset:
+#include <stdio.h>
+int main() {
+  
+    int num,pos;
+    printf("enter the number :");
+    scanf("%d",&num);
+    printf("enter the pos:");
+    scanf("%d",&pos);
+  if((num&(1<<(pos-1)))>=1)
+printf("set");
+else
+printf("unset");
+ 
+    return 0;
+}
+
+
+
+
+to know the unique element in array
+#include <stdio.h>
+int main() {
+  
+    int arr[]={2,3,2,2,1,1};
+    int res=arr[0];
+    int size=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<size;i++)
+    {
+        res=res^arr[i];
+    }
+    printf("%d",res);
+    return 0;
+}
