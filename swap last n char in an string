@@ -8,7 +8,7 @@ int main()
     printf("enter the str: ");
     scanf("%s",s);
     for(len=0;s[len]!='\0';len++);
-    for(i=0;i<len-2;i++)
+    for(i=0;i<2;i++)
     {
     temp=s[len-(R-i)];
    s[len-(R-i)]=s[len-(i+1)];
