@@ -5,18 +5,13 @@ struct node
     int data;
     struct node* next;
 };
- 
-//Globally initialized head pointer
 struct node* head = NULL;
- 
-//function prototyping
 struct node* create_node(int);
 void insert_begin(int);
 void reverse();
 void print();
 int main()
 {
-    /* Create some nodes and insert data into them */
     insert_begin(10);
     insert_begin(90);
     insert_begin(31);
@@ -29,10 +24,6 @@ int main()
     print();
     return 0;
 }
- 
-/*
-* Creates a new node using the malloc function
-*/
 struct node* create_node(int data)
 {
     struct node* new_node = (struct node*) malloc (sizeof(struct node));
@@ -48,10 +39,6 @@ struct node* create_node(int data)
         return new_node;
     }
 }
- 
-/*
-* insert a new node at the beginning of the list
-*/
 void insert_begin(int data)
 {
     struct node* new_node = create_node(data);
@@ -61,10 +48,6 @@ void insert_begin(int data)
         head = new_node;
     }
 }
- 
-/*
-* reverse the linked list
-*/
 void reverse()
 {
     struct node *prevnode, *currentnode, *nextnode;
@@ -79,10 +62,6 @@ void reverse()
     }
     head=prevnode;
     }
- 
-/*
-* prints the linked list
-*/
 void print()
 {
     struct node* temp = head;
