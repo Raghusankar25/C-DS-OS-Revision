@@ -9,6 +9,6 @@ int main() {
 for(i=1;s[i]!='\0';i++)
 temp = s[0];
 s[0] = s[n-1];
-s[n1i] = temp;
+s[n-1] = temp;
 	printf("Output String: %s", s);
 }
