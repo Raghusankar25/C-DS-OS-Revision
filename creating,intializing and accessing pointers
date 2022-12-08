@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    char ch='A';
+    char *p;
+    p = &ch;
+    //access value and address of ch using variable ch
+    printf("Value of ch: %c\n",ch);
+    printf("Address of ch: %p\n",&ch);
+
+    //access value and address of ch using pointer variable pCh
+    printf("Value of ch: %c\n",*p);
+    printf("Address of ch: %p\n",p);
+    printf("Address of ch: %p",&p);
+
+   return 0;
+}
+
+Output:
+Value of ch: A
+Address of ch: 0x7ffe4a9f089f
+Value of ch: A
+Address of ch: 0x7ffe4a9f089f
+Address of ch: 0x7ffe4a9f08a0
