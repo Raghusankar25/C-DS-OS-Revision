@@ -1,0 +1,25 @@
+#include <stdio.h>
+void count1s0s(int n)
+{
+    int count0=0,count1=0;
+    while(n>0)
+    {
+        if(n&1)
+        {
+            count1++;
+        }
+            else{
+                count0++;
+            }
+        n=n>>1;
+    }
+     printf("Count0s in the numbers is :%d\n",count0);
+        printf("Count1s in the numbers is :%d",count1);
+}
+int main()
+{
+    int n=9;
+    count1s0s(n);
+
+    return 0;
+}
