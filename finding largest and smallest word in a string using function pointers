@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<string.h>
+void s1(char str[])
+{
+    int len=strlen(str);
+    char s[100][100],min[100],max[100];
+    int k,i=0,j=0;
+    for(k=0;k<len;k++)
+    {
+    if(str[k]!=32 && str[k]!='\0')
+    {
+        s[i][j++]=str[k];
+    }
+    else
+    {
+        s[i][j]='\0';
+        i++;
+        j=0;
+    }
+}
+int l=i+1;
+strcpy(min,s[0]);
+strcpy(max,s[0]);
+for(k=0;k<l;k++)
+{
+    if(strlen(min)>=strlen(s[k]))
+    {
+    strcpy(min,s[k]);
+    }
+    else if(strlen(max)<strlen(s[k]))
+    {
+    strcpy(max,s[k]);
+    }
+}
+printf("the max words in a string are: %s\n",max);
+printf("the min words in a string are: %s ",min);
+}
+int main()
+{
+    char str[]="i in a confused state";
+    void (*fptr)(char []);
+    fptr=s1;
+    fptr(str);
+    return 0;
+}
