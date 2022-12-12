@@ -1,0 +1,29 @@
+#include <stdio.h>
+void func(char s[])
+{
+   
+   int count=0,largest=0;
+     for(int i=0;s[i]!='\0';i++)
+     {
+       count++;
+   if(s[i]==' ')
+   {
+      if (largest<count)
+      {
+          largest = count-1;
+          count =0;
+      }
+      count =0;
+     }
+     }
+    printf("%d ",largest);
+}
+int main()
+{
+    char s[]="my name is raghuvaran ";
+    void(*func_ptr)(char[]);
+    func_ptr=&func;
+    func_ptr(s);
+    return 0;
+}
+
