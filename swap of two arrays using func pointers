@@ -1,0 +1,50 @@
+#include <stdio.h>
+void swap(int *p, int *q, int n)
+{
+	int t;
+	printf("before swapping first arrays elements are:");
+	for (int i = 0; i < n; i++)
+	{
+	    printf("%d ",p[i]);
+	
+	}
+	printf("\n");
+		printf("before swapping second arrays elements are:");
+	for (int i = 0; i < n; i++)
+	{
+	    printf("%d ",q[i]);
+	
+	}
+	printf("\n");
+	for (int i = 0; i < n; i++)
+	{
+
+		t=*(p+i);
+		*(p+i)=*(q+i);
+		*(q+i)=t;
+		
+	}
+		printf("after swapping first arrays elements are:");
+	for (int i = 0; i < n; i++)
+	{
+	    printf("%d ",p[i]);
+	
+	}
+	printf("\n");
+		printf("after swapping second arrays elements are:");
+	for (int i = 0; i < n; i++)
+	{
+	    printf("%d ",q[i]);
+	
+	}
+}
+int main()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
+	int arr1[5]= {50, 40, 30, 20, 10};
+	int *p = arr;
+	int *q = arr1;
+	void (*fptr)(int *, int *, int)=swap;
+	fptr(p,q,5);
+	return 0;
+}
