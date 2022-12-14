@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+void search(int arr[])
+{
+	int n,i,pos=0,*a,element;
+	printf("Enter size of array:");
+	scanf("%d",&n);
+	a=calloc(sizeof(int),n);
+	printf("Enter %d Elements:",n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",a+i);
+	}
+	printf("Enter a element to find:");
+	scanf("%d",&element);
+	for(i=0;i<n;i++)
+	{
+		if(*(a+i)==element)
+		{
+			pos=1;
+			break;
+		}
+		else
+		    continue;
+	}
+		if(pos==1)
+		    printf("%d is in %d",element,pos);
+		else
+		    printf("element not found");
+}
+int main()
+{
+    int arr[10];
+    void (*fptr)(int [])=search;
+    fptr(arr);
+    return 0;
+}
