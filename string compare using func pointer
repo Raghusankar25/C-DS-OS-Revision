@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<string.h>
+enum errors{E_EQUAL,E_NOTEQUAL};
+void stringcmp(char s1[], char s2[])
+{
+    int flag=E_EQUAL;
+    for(int i=0;s1[i]!='\0'||s2[i]!='\0';i++)
+    {
+        if(s1[i]!=s2[i])
+        {
+            flag=E_NOTEQUAL;
+            break;
+        }
+    }
+    (flag==E_NOTEQUAL)?printf("string not same"):printf("strings are same");
+}
+int main()
+{
+    char s1[20];
+    char s2[20];
+    printf("enter s1:");
+    scanf("%s",s1);
+    printf("enter s2:");
+    scanf("%s",s2);
+    void (*fptr)(char[], char[])=stringcmp;
+    fptr(s1,s2);
+    return 0;
+}
