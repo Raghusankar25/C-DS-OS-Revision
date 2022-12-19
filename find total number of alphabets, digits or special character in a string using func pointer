@@ -1,0 +1,31 @@
+#include<stdio.h>
+void count(char str[])
+{
+  	int i, alphabets, digits, special;
+  	alphabets = digits = special = 0;
+  	for(i = 0; str[i] != '\0'; i++)
+  	{
+  		if (str[i] >= 48 && str[i] <= 57)
+  		{
+  			digits++;  	
+ 		}
+  		else if((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
+  		{
+  			alphabets++; 	
+  		}    
+  		else
+    		special++;
+	}
+    printf("\n Number of Alphabets in this String = %d", alphabets);  
+	printf("\n Number of Digits in this String = %d", digits);  
+	printf("\n Number of Special Characters in this String = %d", special);  	
+}
+int main()
+{
+    char str[100];
+  	printf("Enter any String :  ");
+  	scanf("%s",str);  
+  	void (*fptr)(char [])=count;
+  	fptr(str);
+  	return 0;
+}
