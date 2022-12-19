@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+void conct(char str1[], char str2[], char str3[])
+{
+  int i=0,j=0;
+  while(str1[i]!='\0')
+  {
+  str3[j]=str1[i];
+  i++;
+  j++;
+  }
+  i=0;
+  while(str2[i]!='\0')
+  {
+    str3[j]=str2[i];
+    i++;
+    j++;
+  }
+  str3[j]='\0';
+  printf("\nConcatenated String is %s",str3);
+}
+int main()
+{
+    char str1[25]="Raghu",str2[25]="varan";
+    char str3[25];
+  printf("First String:%s",str1);
+  printf("\nSecond String:%s",str2);
+    void (*fptr)(char [], char[], char[])=conct;
+    fptr(str1,str2,str3);
+    return 0;
+}
