@@ -1,0 +1,14 @@
+#include<stdio.h>
+void lsb(int num)
+{
+    (num&1)? printf("lsb of %d is set(1)",num) :printf("lsb of %d is set(0)",num);
+}
+int main()
+{
+    int num;
+    printf("enter number:");
+    scanf("%d",&num);
+    void (*fptr)(int)=lsb;
+    fptr(num);
+    return 0;
+}
