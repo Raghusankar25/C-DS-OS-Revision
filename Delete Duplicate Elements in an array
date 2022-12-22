@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+
+{
+
+     int num[20],i=0,j=0;
+     int len=0;
+     printf("enter the length:");
+     scanf("%d",&len);
+     printf("enter the number:");
+     for(i=0;i<len;i++)
+     scanf("%d",&num[i]);
+     for(i=0;i<len;i++)
+     {
+         for(j=0;j<i;j++)
+         {
+             if(num[i]==num[j])
+        break;
+         }
+         {
+
+             printf("%d ",num[i]);
+
+             
+
+         } 
+
+     }
+
+    
+
+}
