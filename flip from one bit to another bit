@@ -1,0 +1,22 @@
+#include<stdio.h>
+#define N sizeof(int)*8
+int flip(int *p,int *p1)
+{
+    int k=0,k1=0,c=0;
+    for(int i=0;i<N;i++)
+    {
+        k=(p>>i)^1;
+        k1=(p1>>i)^1;
+        if(k!=k1)
+        c++;
+    }
+    printf("%d",c);
+}
+int main()
+{
+    int n=5,n1=6;
+    int *p=n;
+    int *p1=n1;
+    int (*fptr)(int ,int )=flip;
+    fptr(p,p1);
+}
