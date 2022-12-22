@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int fun(int num[],int ele, int pos,int l,int i)
+
+{
+
+    for(i=1;i<=l-pos;i++)
+
+    {
+
+        num[l-i]=num[l-i-1];
+
+    }
+
+    num[pos-1]=ele;
+
+    for(i=0;i<l;i++)
+
+    {
+
+        printf("%d",num[i]);
+
+    }
+
+}
+
+int main()
+
+{
+
+    int num[20],ele,pos=0,l,i;
+
+    printf("enter the l and ele and pos");
+
+    scanf("%d %d %d ",&l,&ele,&pos);
+
+    for(i=0;i<l;i++)
+
+    scanf("%d",&num[i]);
+
+    int (*fptr)(int [],int ,int,int,int)=fun;
+
+    fptr(num,ele,pos,l,i);
+
+}
