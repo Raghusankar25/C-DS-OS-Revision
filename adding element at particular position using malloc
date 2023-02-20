@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<stdlib.h>
+void fun(int *p,int ele, int pos,int l)
+{
+    for(int i=l-1;i>=pos;i--)
+    {
+        p[i]=p[i-1];
+    }
+    p[pos-1]=ele;
+    for(int i=0;i<l;i++)
+    {
+        printf("%d ",*(p+i));
+    }
+}
+int main()
+{
+    int a[5],ele=30,pos=2,i;
+    int l=sizeof(a)/sizeof(a[0]);
+    // printf("enter l,ele and pos:");
+    // scanf("%d %d %d",&l,&ele,&pos);
+    int *p=(int*)malloc(l*sizeof(int));
+    for(i=0;i<l;i++)
+    scanf("%d",(p+i));
+    void (*fptr)(int *p,int,int,int)=fun;
+    fptr(p,ele,pos,l);
+
+    return 0;
+}
